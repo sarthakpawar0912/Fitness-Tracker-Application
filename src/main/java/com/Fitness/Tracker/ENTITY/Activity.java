@@ -7,8 +7,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Data;
-
-import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -23,7 +21,6 @@ public class Activity {
     private Date date;
     private Integer steps;
 
-
     public ActivityDTO getActivityDTO(){
         ActivityDTO activityDTO= new ActivityDTO();
         activityDTO.setId(id);
@@ -34,4 +31,5 @@ public class Activity {
 
         return activityDTO;
     }
+
 }
