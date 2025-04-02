@@ -17,4 +17,5 @@ public interface WorkoutRepository extends JpaRepository<Workout,Long> {
 
     @Query("SELECT w FROM Workout w ORDER BY w.date DESC")
     List<Workout> findLast7Workouts(Pageable pageable);
+
 }
