@@ -12,16 +12,13 @@ import java.util.Date;
 @Entity
 @Data
 public class Goal {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String description;
-
     private Date startDate;
-
     private Date endDate;
-
     private boolean achieved;
 
     public GoalDTO getGoalDTO(){
@@ -35,4 +32,5 @@ public class Goal {
 
         return goalDTO;
     }
+
 }
