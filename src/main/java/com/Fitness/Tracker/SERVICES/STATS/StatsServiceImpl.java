@@ -8,11 +8,9 @@ import com.Fitness.Tracker.ENTITY.Workout;
 import com.Fitness.Tracker.REPOSITORY.ActivityRepository;
 import com.Fitness.Tracker.REPOSITORY.GoalRepository;
 import com.Fitness.Tracker.REPOSITORY.WorkoutRepository;
-import com.Fitness.Tracker.SERVICES.GOAL.GoalService;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -28,8 +26,6 @@ public class StatsServiceImpl implements  StatsService {
         this.activityRepository = activityRepository;
         this.workoutRepository = workoutRepository;
     }
-
-
 
     public StatsDTO getStats() {
         Long achievedGoals = goalRepository.countAchievedGoals();
@@ -70,8 +66,6 @@ public class StatsServiceImpl implements  StatsService {
         graphDTO.setActivities(activities.stream().map(Activity::getActivityDTO).collect(Collectors.toList()));
 
         return graphDTO;
-
-
-
     }
+
 }
