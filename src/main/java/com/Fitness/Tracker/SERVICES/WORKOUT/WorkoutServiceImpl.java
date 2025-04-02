@@ -5,7 +5,6 @@ import com.Fitness.Tracker.ENTITY.Activity;
 import com.Fitness.Tracker.ENTITY.Workout;
 import com.Fitness.Tracker.REPOSITORY.WorkoutRepository;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
