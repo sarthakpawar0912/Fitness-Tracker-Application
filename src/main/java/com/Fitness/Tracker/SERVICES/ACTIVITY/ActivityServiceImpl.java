@@ -27,7 +27,6 @@ public class ActivityServiceImpl implements  ActivityService{
         return activityRepository.save(activity).getActivityDTO();
     }
 
-
     public List<ActivityDTO> getActivities(){
         List<Activity> activities=activityRepository.findAll();
         return activities.stream() .map(Activity::getActivityDTO).collect(Collectors.toList());
