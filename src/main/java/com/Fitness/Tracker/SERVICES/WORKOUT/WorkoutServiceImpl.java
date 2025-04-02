@@ -28,7 +28,6 @@ public class WorkoutServiceImpl implements WorkoutService{
         return workoutRepository.save(workout).getWorkoutDTO();
     }
 
-
     public List<WorkoutDTO> getWorkouts(){
         List<Workout> workouts=workoutRepository.findAll();
         return workouts.stream() .map(Workout::getWorkoutDTO).collect(Collectors.toList());
