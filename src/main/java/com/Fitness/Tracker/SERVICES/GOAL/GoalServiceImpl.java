@@ -7,7 +7,6 @@ import com.Fitness.Tracker.ENTITY.Goal;
 import com.Fitness.Tracker.REPOSITORY.GoalRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -30,14 +29,13 @@ public class GoalServiceImpl implements GoalService{
         goal.setAchieved(false);
 
         return goalRepository.save(goal).getGoalDTO();
-    }
 
+    }
 
     public List<GoalDTO> getGoals(){
         List<Goal> goals=goalRepository.findAll();
         return goals.stream() .map(Goal::getGoalDTO).collect(Collectors.toList());
     }
-
 
    public GoalDTO updateStatus(Long id){
        Optional<Goal> optionalGoal=goalRepository.findById(id);
