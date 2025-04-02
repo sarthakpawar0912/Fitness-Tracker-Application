@@ -19,7 +19,6 @@ public class ActivityServiceImpl implements  ActivityService{
     public ActivityDTO postActivity(ActivityDTO  dto){
         Activity activity=new Activity();
 
-
         activity.setDate(dto.getDate());
         activity.setSteps(dto.getSteps());
         activity.setDistance(dto.getDistance());
