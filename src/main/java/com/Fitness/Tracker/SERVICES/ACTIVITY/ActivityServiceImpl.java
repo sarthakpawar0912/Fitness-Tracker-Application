@@ -4,7 +4,6 @@ import com.Fitness.Tracker.DTO.ActivityDTO;
 import com.Fitness.Tracker.ENTITY.Activity;
 import com.Fitness.Tracker.REPOSITORY.ActivityRepository;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
