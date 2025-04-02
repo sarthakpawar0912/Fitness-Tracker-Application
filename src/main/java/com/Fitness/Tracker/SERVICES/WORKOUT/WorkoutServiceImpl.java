@@ -17,10 +17,8 @@ public class WorkoutServiceImpl implements WorkoutService{
         this.workoutRepository = workoutRepository;
     }
 
-
     public WorkoutDTO postWorkout(WorkoutDTO workoutDTO){
         Workout workout=new Workout();
-
 
         workout.setDate(workoutDTO.getDate());
         workout.setType(workoutDTO.getType());
