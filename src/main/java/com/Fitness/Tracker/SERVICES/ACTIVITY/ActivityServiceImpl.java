@@ -32,10 +32,4 @@ public class ActivityServiceImpl implements  ActivityService{
         return activities.stream() .map(Activity::getActivityDTO).collect(Collectors.toList());
     }
 
-
-
-
-
-
-
 }
