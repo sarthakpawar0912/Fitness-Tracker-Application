@@ -18,7 +18,6 @@ public class ActivityController {
         this.activityService = activityService;
     }
 
-
     @PostMapping("/activity")
     public ResponseEntity<?> postActivity(@RequestBody ActivityDTO dto){
         ActivityDTO createActivity=activityService.postActivity(dto);
@@ -31,7 +30,6 @@ public class ActivityController {
         }
     }
 
-
     @GetMapping("/activities")
     public ResponseEntity<?> getActivities(){
         try {
@@ -41,6 +39,5 @@ public class ActivityController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Something Went Wrong..!!");
         }
     }
-
 
 }
