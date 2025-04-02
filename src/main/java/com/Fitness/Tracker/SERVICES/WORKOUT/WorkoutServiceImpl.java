@@ -33,7 +33,4 @@ public class WorkoutServiceImpl implements WorkoutService{
         return workouts.stream() .map(Workout::getWorkoutDTO).collect(Collectors.toList());
     }
 
-
-
-
 }
