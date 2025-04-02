@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-
 public class WorkoutServiceImpl implements WorkoutService{
 
     private final WorkoutRepository workoutRepository;
